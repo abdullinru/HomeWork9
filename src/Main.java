@@ -17,6 +17,9 @@ public class Main {
         for (int i = 0; i < reverseFullName.length; i++) {
             System.out.print(reverseFullName[i]);
         }
+        System.out.println("");
+        String stroka = "aabccddefgghiijjkk";
+        validator(stroka);
 
 
 
@@ -28,5 +31,13 @@ public class Main {
             str[str.length - 1 - i] = simbol;
         }
 
+    }
+    private static void validator (String str) {
+        for (int i = 0; i < str.length()-1; i++) {
+            if (str.charAt(i) == str.charAt(i+1)) {
+                System.out.println("Найден дубль: " + str.charAt(i));
+                break;
+            }
+        }
     }
 }
