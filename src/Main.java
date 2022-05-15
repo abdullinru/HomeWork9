@@ -7,6 +7,12 @@ public class Main {
         Book book1 = new Book(author1, "Voina i mir", 1979);
         Book book2 = new Book(author2, "gore ot uma", 2000);
         book1.setYearPublishing(2005);
+        Book[]bibl = new Book[10];
+        bibl[0] = book1;
+        bibl[1] = book2;
+        addBook(bibl, book1);
+        addBook(bibl, book2);
+        printBook(bibl);
 
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = 0; i < reverseFullName.length; i++) {
@@ -24,7 +30,25 @@ public class Main {
         System.out.println("");
         int[] arr = generateRandomArray();
         System.out.println("Среднее значение = " + srednee(arr));
+    }
 
+    private static void addBook(Book[]bibl, Book kniga) {
+        for (int i = 0; i < bibl.length; i++) {
+            if (bibl[i] == null) {
+                bibl[i] = kniga;
+                break;
+            }
+        }
+
+    }
+
+    private static void printBook (Book[] bibl) {
+        int i = 0;
+        while (bibl[i] != null) {
+            System.out.println(bibl[i].author.name + " " + bibl[i].author.familiya + ": " + bibl[i].name + ": " + bibl[i].getYear() );
+            i++;
+        }
+        System.out.println();
 
     }
     private static void revers (char[] str) {
