@@ -52,7 +52,7 @@ public class Main {
         }
         return arr;
     }
-    public static double srednee(int[] arr) {
+    private static double srednee(int[] arr) {
         int sum = 0;
         for (int j : arr) {
             sum += j;
