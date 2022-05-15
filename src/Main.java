@@ -8,6 +8,26 @@ public class Main {
         Book book2 = new Book(author2, "gore ot uma", 2000);
         book1.setYearPublishing(2005);
 
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = 0; i < reverseFullName.length; i++) {
+            System.out.print(reverseFullName[i]);
+        }
+        System.out.println("");
+        char[] fullName = revers(reverseFullName);
+        for (int i = 0; i < fullName.length; i++) {
+            System.out.print(fullName[i]);
+        }
+
+
+
+    }
+    private static char[] revers (char[] str) {
+        for (int i = 0; i < str.length/2; i++) {
+            char simbol = str[i];
+            str[i] = str[str.length - 1 - i];
+            str[str.length - 1 - i] = simbol;
+        }
+        return str;
 
     }
 }
