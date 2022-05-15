@@ -13,21 +13,20 @@ public class Main {
             System.out.print(reverseFullName[i]);
         }
         System.out.println("");
-        char[] fullName = revers(reverseFullName);
-        for (int i = 0; i < fullName.length; i++) {
-            System.out.print(fullName[i]);
+        revers(reverseFullName);
+        for (int i = 0; i < reverseFullName.length; i++) {
+            System.out.print(reverseFullName[i]);
         }
 
 
 
     }
-    private static char[] revers (char[] str) {
+    private static void revers (char[] str) {
         for (int i = 0; i < str.length/2; i++) {
             char simbol = str[i];
             str[i] = str[str.length - 1 - i];
             str[str.length - 1 - i] = simbol;
         }
-        return str;
 
     }
 }
