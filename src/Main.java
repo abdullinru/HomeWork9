@@ -21,6 +21,8 @@ public class Main {
         knigi.infoBook("Voina i mir");
         knigi.changeBookYearPublish("Voina i mir", 2022);
         knigi.print();
+        System.out.println(book1);
+        System.out.println(book2);
 //        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 //        for (int i = 0; i < reverseFullName.length; i++) {
 //            System.out.print(reverseFullName[i]);
