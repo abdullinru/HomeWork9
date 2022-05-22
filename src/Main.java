@@ -54,7 +54,7 @@ public class Main {
     private static void printBook (Book[] bibl) {
         int i = 0;
         while (bibl[i] != null) {
-            System.out.println(bibl[i].author.name + " " + bibl[i].author.familiya + ": " + bibl[i].name + ": " + bibl[i].getYear() );
+            System.out.println(bibl[i].getAuthor().getName() + " " + bibl[i].getAuthor().getFamiliya() + ": " + bibl[i].getName() + ": " + bibl[i].getYear() );
             i++;
         }
         System.out.println();

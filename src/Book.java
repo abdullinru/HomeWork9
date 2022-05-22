@@ -1,7 +1,9 @@
+import java.util.Objects;
+
 public class Book {
-    Author author;
-    String  name;
-    int yearPublishing;
+    private Author author;
+    private String  name;
+    private int yearPublishing;
 
     public Book (Author author, String name, int yearPublishing) {
         this.author = author;
@@ -32,7 +34,9 @@ public class Book {
 
         Book book = (Book) o;
 
-        return name != null ? name.equals(book.name) : book.name == null;
+        return Objects.equals(author, book.getAuthor())&&
+                Objects.equals(name, book.getName())&&
+                Objects.equals(yearPublishing, book.getYear());
     }
 
     @Override

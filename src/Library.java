@@ -17,7 +17,7 @@ public class Library {
     public void print () {
         int i = 0;
         while (bibl[i] != null) {
-            System.out.println(bibl[i].author.name + " " + bibl[i].author.familiya + ": " + bibl[i].name + ": " + bibl[i].getYear() );
+            System.out.println(bibl[i].getAuthor().getName() + " " + bibl[i].getAuthor().getFamiliya() + ": " + bibl[i].getName() + ": " + bibl[i].getYear() );
             i++;
         }
         System.out.println();
@@ -27,10 +27,10 @@ public class Library {
         int i = 0;
         while (bibl[i] != null) {
             if (bibl[i].getName().equals(nameBook)) {
-                System.out.println("The Stand by " + bibl[i].author.name + " " + bibl[i].author.familiya + " was published in " + bibl[i].getYear());
-                i++;
+                System.out.println("The Stand by " + bibl[i].getAuthor().getName() + " " + bibl[i].getAuthor().getFamiliya() + " was published in " + bibl[i].getYear());
                 break;
             }
+            i++;
         }
     }
     public void changeBookYearPublish (String nameBook, int year) {

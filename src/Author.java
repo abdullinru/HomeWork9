@@ -1,6 +1,8 @@
+import java.util.Objects;
+
 public class Author {
-    String name;
-    String familiya;
+    private String name;
+    private String familiya;
     public Author (String name, String familiya) {
         this.name = name;
         this.familiya = familiya;
@@ -20,9 +22,9 @@ public class Author {
         if (o == null || getClass() != o.getClass()) return false;
 
         Author author = (Author) o;
+        return Objects.equals(name, author.getName())&&Objects.equals(familiya, author.getFamiliya());
 
-        if (name != null ? !name.equals(author.name) : author.name != null) return false;
-        return familiya != null ? familiya.equals(author.familiya) : author.familiya == null;
+
     }
 
     @Override
