@@ -5,7 +5,7 @@ public class Book {
     private String  name;
     private int yearPublishing;
 
-    public Book (Author author, String name, int yearPublishing) {
+    public Book (String name, Author author, int yearPublishing) {
         this.author = author;
         this.name = name;
         this.yearPublishing = yearPublishing;
@@ -46,8 +46,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return author.toString() +
-                ", Название: " + name +
-                ", Год публикации: " + yearPublishing;
+        return name + " by " +
+                author.toString() +
+                "; Год публикации: " + yearPublishing;
     }
 }

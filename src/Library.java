@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Library {
     private Book[] bibl;
 
@@ -42,4 +44,13 @@ public class Library {
         }
     }
 
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        str.append("Library:\n");
+        for (Book book : bibl) {
+            str.append("book: ").append(book.toString()).append('\n');
+        }
+        return  str.toString();
+    }
 }

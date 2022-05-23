@@ -2,43 +2,35 @@
 public class Main {
     public static void main(String[] args) {
 
-        Author author1 = new Author("Lev","Tolstoy");
-        Author author2 = new Author("Evgeniy", "Onegin");
-        Book book1 = new Book(author1, "Voina i mir", 1979);
-        Book book2 = new Book(author2, "gore ot uma", 2000);
-        book1.setYearPublishing(2005);
-//        Book[]bibl = new Book[10];
-//        bibl[0] = book1;
-//        bibl[1] = book2;
-//        addBook(bibl, book1);
-//        addBook(bibl, book2);
-//        printBook(bibl);
+        System.out.println("Authors:");
+        Author stephenKing = new Author("Stephen", "King");
+        Author stephenKing2 = new Author("Stephen", "King");
+        Author levTolstoy = new Author("Lev", "Tolstoy");
+        System.out.println("Author copies equal: " + stephenKing.equals(stephenKing2));
+        System.out.println("Author copies equal by hashCode: " + (stephenKing.hashCode() == stephenKing2.hashCode()));
+        System.out.println("Authors equal: " + stephenKing.equals(levTolstoy));
+        System.out.println("Authors equal by hashCode: " + (stephenKing.hashCode() == levTolstoy.hashCode()));
 
-        Library knigi = new Library(10);
-        knigi.addBook(book1);
-        knigi.addBook(book2);
-        knigi.print();
-        knigi.infoBook("Voina i mir");
-        knigi.changeBookYearPublish("Voina i mir", 2022);
-        knigi.print();
-        System.out.println(book1);
-        System.out.println(book2);
-//        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-//        for (int i = 0; i < reverseFullName.length; i++) {
-//            System.out.print(reverseFullName[i]);
-//        }
-//        System.out.println("");
-//        revers(reverseFullName);
-//        for (int i = 0; i < reverseFullName.length; i++) {
-//            System.out.print(reverseFullName[i]);
-//        }
-//        System.out.println("");
-//        String stroka = "aabccddefgghiijjkk";
-//        validator(stroka);
-//
-//        System.out.println("");
-//        int[] arr = generateRandomArray();
-//        System.out.println("Среднее значение = " + srednee(arr));
+        System.out.println(stephenKing);
+        System.out.println(levTolstoy);
+
+        System.out.println("==============================");
+
+        System.out.println("Books:");
+        Book theStand = new Book("The Stand", stephenKing, 1976);
+        Book theStand2 = new Book("The Stand", stephenKing, 1976);
+        Book warAndPeace = new Book("War and Peace", levTolstoy, 1869);
+        System.out.println("Book copies equal: " + theStand.equals(theStand2));
+        System.out.println("Book copies equal by hashCode: " + (theStand.hashCode() == theStand2.hashCode()));
+        System.out.println("Books equal: " + theStand.equals(warAndPeace));
+        System.out.println("Books equal by hashCode: " + (theStand.hashCode() == warAndPeace.hashCode()));
+        System.out.println(theStand);
+        System.out.println(warAndPeace);
+        Library library = new Library(2);
+        library.addBook(theStand);
+        library.addBook(warAndPeace);
+        System.out.println(library);
+
     }
 
     private static void addBook(Book[]bibl, Book kniga) {
